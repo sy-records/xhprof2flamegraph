@@ -2,6 +2,12 @@
 
 🎨将xhprof产生的数据转为可以生成flame graph火焰图的格式并生成火焰图
 
+## 安装
+
+```
+composer require sy-records/xhprof2flamegraph
+```
+
 ## 使用
 
 1. 给予可执行权限
