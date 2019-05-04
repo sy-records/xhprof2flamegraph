@@ -10,13 +10,9 @@ composer require sy-records/xhprof2flamegraph
 
 ## 使用
 
-1. 给予可执行权限
+`vendor/bin`目录下有两个可执行文件，执行命令
 ```shell
-chmod +x flamegraph.pl xhprof2flamegraph
-```
-2. 执行命令
-```shell
-./xhprof2flamegraph -f ./test.xhprof | ./flamegraph.pl > out.svg
+./vendor/bin/xhprof2flamegraph -f ./test.xhprof | ./vendor/bin/flamegraph.pl > out.svg
 ```
 
 > 替换对应的路径信息
