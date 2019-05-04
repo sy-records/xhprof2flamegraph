@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+$file = __DIR__ . '/vendor/autoload.php';
+if (file_exists($file)) {
+    require_once $file;
+} else {
+    throw new \Exception("Please modify the path of composer's autoload.php file.");
+}
+
+use Xhprof2Flamegraph\Command\Command;
+
+Command::main();
