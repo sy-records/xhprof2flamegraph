@@ -1,0 +1,32 @@
+{
+  "name": "sy-records/xhprof2flamegraph",
+  "description": "将xhprof产生的数据转为可以生成flamegraph火焰图的格式并生成火焰图",
+  "type": "library",
+  "keywords": [
+    "flamegraph",
+    "xhprof",
+    "tideways"
+  ],
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Shen Yan",
+      "email": "52o@qq52o.cn"
+    }
+  ],
+  "support": {
+    "email": "52o@qq52o.cn",
+    "issues": "https://github.com/sy-records/xhprof2flamegraph/issues"
+  },
+  "require": {
+    "php": ">=5.4"
+  },
+  "bin": [
+    "xhprof2flamegraph"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Xhprof2Flamegraph\\": "src/"
+    }
+  }
+}
