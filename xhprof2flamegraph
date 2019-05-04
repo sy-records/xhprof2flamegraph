@@ -12,7 +12,6 @@
 // vendor上一级 || vendor/bin || vendor/sy-records/xhprof2flamegraph
 foreach (array( __DIR__ . '/vendor/autoload.php', __DIR__ . '/../autoload.php', __DIR__. '/../../autoload.php') as $file) {
     if (file_exists($file)) {
-        echo $file;
         require_once $file;
         break;
     }
