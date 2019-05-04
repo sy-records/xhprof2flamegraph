@@ -1,13 +1,21 @@
 #!/usr/bin/env php
 <?php
 
-$file = __DIR__ . '/vendor/autoload.php';
-if (file_exists($file)) {
-    require_once $file;
-} else {
-    throw new \Exception("Please modify the path of composer's autoload.php file.");
+
+//$file = __DIR__ . '/vendor/autoload.php';
+//if (file_exists($file)) {
+//    require_once $file;
+//} else {
+//    throw new \Exception("Please modify the path of composer's autoload.php file.");
+//}
+
+// vendor上一级 || vendor/bin || vendor/sy-records/xhprof2flamegraph
+foreach (array( __DIR__ . '/vendor/autoload.php', __DIR__ . '/../autoload.php', __DIR__. '/../../autoload.php') as $file) {
+    if (file_exists($file)) {
+        echo $file;
+        require_once $file;
+        break;
+    }
 }
 
-use Xhprof2Flamegraph\Command\Command;
-
-Command::main();
+\Xhprof2Flamegraph\Command\Command::main();
