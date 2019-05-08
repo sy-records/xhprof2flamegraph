@@ -23,7 +23,7 @@ composer require sy-records/xhprof2flamegraph
 
 * xhprof2flamegraph -h
 ```shell
-usage: xhprof2flamegraph [-h, --help] [--f, --profile] [--metrics]
+usage: xhprof2flamegraph [-h, --help] [-f, --profile] [--metrics]
 options:
     -h, --help      show help
     -f, --profile   file path of xhprof profile data
