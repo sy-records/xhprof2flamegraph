@@ -68,7 +68,12 @@ class Analyzer
         $parent = $records[$record->parent_function];
 
         if (isset($records[$record->parent_function])) {
-            $parents =  array_merge($this->getParents($parent, $records), [$parent]);
+            // fix allowed memory size of
+            unset($records[$record->parent_function]);
+            $tmp = $this->getParents($parent, $records);
+            if (is_array($tmp)) {
+                $parents =  array_merge($tmp, [$parent]);
+            }
         }
         return $parents;
     }
