@@ -17,7 +17,7 @@ composer require sy-records/xhprof2flamegraph
 
 > 替换对应的路径信息
 >
-> -f 为指定的`xhprof`日志文件，`json`格式 （如果日志文件为`serialize`序列化后的数据，请修改`src/Command/Command.php`文件中的第`40`行）
+> -f 为指定的`xhprof`日志文件，<del>`json`格式 （如果日志文件为`serialize`序列化后的数据，请修改`src/Command/Command.php`文件中的第`40`行）</del>，自动处理`json`和`serialize`格式的数据
 
 ## 帮助
 
