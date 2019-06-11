@@ -65,7 +65,7 @@ class Analyzer
             return $parents;
         }
 
-        $parent = $records[$record->parent_function];
+        @$parent = $records[$record->parent_function];
 
         if (isset($records[$record->parent_function])) {
             // fix allowed memory size of
