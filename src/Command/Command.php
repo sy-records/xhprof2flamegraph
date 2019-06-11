@@ -37,11 +37,16 @@ class Command
             $data = trim(fgets(STDIN));
         }
 
-//        $data = unserialize($data);
+        // json decode data
         $data = json_decode($data, true);
+
         // decode error
-        if (!$data) {
-            throw new \Exception('xhprof profile data error, json_decode error code ' . json_last_error());
+        if (is_null($data)) {
+			// unserialize data again
+			$data = unserialize($data);
+			if (!is_array($data)) {
+				throw new \Exception('xhprof profile data error');
+			}
         }
 
         if (!isset($options["metrics"])) {
@@ -78,13 +83,13 @@ class Command
                 case "profile":
                 case "f":
                     if (!file_exists($value)) {
-                        throw new \Exception("profile is not found.");
+                        throw new \Exception("xhprof profile is error file");
                     }
                     $result["profile"] = $value;
                     break;
                 case "metrics":
                     if (in_array($value, $this->metrics) === false) {
-                        throw new \Exception("metrics option is given invalid value. ".$value." is given.");
+                        throw new \Exception("metrics option is given invalid value. ".$value." is given");
                     }
                     $result["metrics"] = $value;
                     break;
