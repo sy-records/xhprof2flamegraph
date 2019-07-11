@@ -103,11 +103,19 @@ class Command
     protected function showHelp()
     {
         echo <<<HELP
-usage: xhprof2flamegraph [-h, --help] [-f, --profile] [--metrics]
-options:
-    -h, --help      show help
+         _                               __   ____     __ 
+ __  __ | |__    _ __    _ __    ___    / _| |___ \   / _|
+ \ \/ / | '_ \  | '_ \  | '__|  / _ \  | |_    __) | | |_ 
+  >  <  | | | | | |_) | | |    | (_) | |  _|  / __/  |  _|
+ /_/\_\ |_| |_| | .__/  |_|     \___/  |_|   |_____| |_|  
+                |_|                                       
+                
+\e[33mUsage:\e[0m
+\e[31m    xhprof2flamegraph [-h, --help] [-f, --profile] [--metrics] \e[0m
+\e[33mOptions:\e[0m
+\e[36m    -h, --help      show help
     -f, --profile   file path of xhprof profile data
-    --metrics       select target metrics (ect/ewt/ecpu/emu/epmu)
+    --metrics       select target metrics (ect/ewt/ecpu/emu/epmu) \e[0m
 
 HELP;
     }
