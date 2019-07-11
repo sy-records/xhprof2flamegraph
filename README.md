@@ -23,11 +23,19 @@ composer require sy-records/xhprof2flamegraph
 
 * xhprof2flamegraph -h
 ```shell
-usage: xhprof2flamegraph [-h, --help] [-f, --profile] [--metrics]
-options:
+         _                               __   ____     __ 
+ __  __ | |__    _ __    _ __    ___    / _| |___ \   / _|
+ \ \/ / | '_ \  | '_ \  | '__|  / _ \  | |_    __) | | |_ 
+  >  <  | | | | | |_) | | |    | (_) | |  _|  / __/  |  _|
+ /_/\_\ |_| |_| | .__/  |_|     \___/  |_|   |_____| |_|  
+                |_|                                       
+                
+Usage:
+    xhprof2flamegraph [-h, --help] [-f, --profile] [--metrics] 
+Options:
     -h, --help      show help
     -f, --profile   file path of xhprof profile data
-    --metrics       select target metrics (ect/ewt/ecpu/emu/epmu)
+    --metrics       select target metrics (ect/ewt/ecpu/emu/epmu) 
 ```
 
 * flamegraph.pl -help
