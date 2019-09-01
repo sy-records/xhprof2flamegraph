@@ -39,7 +39,6 @@ class Command
 
         // json decode data
         $data = json_decode($data, true);
-
         // decode error
         if (is_null($data)) {
 			// unserialize data again
