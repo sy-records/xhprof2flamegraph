@@ -41,11 +41,11 @@ class Command
         $data = json_decode($data, true);
         // decode error
         if (is_null($data)) {
-			// unserialize data again
-			$data = unserialize($data);
-			if (!is_array($data)) {
-				throw new \Exception('xhprof profile data error');
-			}
+            // unserialize data again
+            $data = unserialize($data);
+            if (!is_array($data)) {
+                throw new \Exception('xhprof profile data error');
+            }
         }
 
         if (!isset($options["metrics"])) {
@@ -73,7 +73,7 @@ class Command
 
         $result = [];
         foreach ($options as $option => $value) {
-            switch ($option){
+            switch ($option) {
                 case "help":
                 case "h":
                     $this->showHelp();
