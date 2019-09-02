@@ -32,17 +32,17 @@ class Command
         $options = $command->parseOptions();
 
         if (isset($options['profile'])) {
-            $data = file_get_contents($options['profile']);
+            $res = file_get_contents($options['profile']);
         } else {
-            $data = trim(fgets(STDIN));
+			$res = trim(fgets(STDIN));
         }
 
         // json decode data
-        $data = json_decode($data, true);
+        $data = json_decode($res, true);
         // decode error
         if (is_null($data)) {
             // unserialize data again
-            $data = unserialize($data);
+			$data = unserialize($res);
             if (!is_array($data)) {
                 throw new \Exception('xhprof profile data error');
             }
